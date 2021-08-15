@@ -52,6 +52,65 @@ namespace ConsoleApp
                 }
                 Console.WriteLine();
             }
+            Console.WriteLine("Равносторонний треугольник ");
+            int k = int.Parse(Console.ReadLine());
+            int n = k - 1;
+            int x = 2 * (k - 1) + 1;
+            for (int p = 0; p <= n; p++)
+            {
+                for (int j = k - 1; j >= 0; j--)
+                {
+                    Console.Write(" ");
+                }
+                for (int i = 0; i <= (x - 2 * (k - 1)); i++)
+                {
+                    if ((i % 2 == 1 && i == 1) || (i % 2 == 1 && i == (x - 2 * (k - 1))) || (i % 2 == 1 && p == n))
+                    {
+                        Console.Write("*");
+                    }
+                    else
+                    {
+                        Console.Write(" ");
+                    }
+                }
+                Console.WriteLine();
+                k--;
+            }
+            Console.WriteLine("Ромб");
+            int h, h1, h2, h3, h4;
+            int s;
+            h = Int32.Parse(Console.ReadLine());
+
+            h /= 2;
+
+            h1 = h - (h - 1);
+            h2 = h;
+            h3 = h - (h - 1);
+            h4 = 2 * h;
+
+            s = h;
+            if (s == h) { h++; }
+
+            for (int c1 = 0; c1 < h; c1++, h2--, h1 += 2)
+            {
+               for (int c2 = 0; c2 < h2; c2++)
+               { Console.Write(" "); }
+               for (int c3 = 0; c3 < h1; c3++)
+               { Console.Write("*"); }
+               Console.WriteLine();
+            }
+            for (int c4 = 0; c4 < h; c4++, h3++, h4 -= 2)
+            {
+               for (int c5 = 0; c5 < h3; c5++)
+               {
+                   Console.Write(" ");
+               }
+               for (int c6 = 0; c6 < h4 - 1; c6++)
+               {
+                   Console.Write("*");
+               }
+               Console.WriteLine();
+            }
             System.Console.WriteLine("----------HomeWork_4----------");
             double percent,deposit;
             int month;
